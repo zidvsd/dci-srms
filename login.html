@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in – DCI Student Records</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<div class="grid md:grid-cols-2 min-h-screen">
+  <div class="bg-pri text-onp p-10 flex flex-col justify-between gap-10">
+    <div>
+      <div class="w-14 h-14 rounded-xl bg-card text-pri grid place-items-center font-bold mb-6">CCC</div>
+      <h1 class="text-4xl font-bold leading-tight max-w-[15ch]">Department of Computing and Informatics</h1>
+      <p class="mt-3 max-w-[40ch]">Student Record Management System, City College of Calamba.</p>
+    </div>
+  </div>
+  <div class="grid place-items-center p-8">
+    <div class="w-full max-w-sm">
+      <h2 class="text-2xl font-semibold">Sign in</h2>
+      <p class="text-mut text-[13px]">Use your department account.</p>
+      <form id="lf" novalidate>
+        <label for="u">Username</label>
+        <input id="u" class="inp w-full" autocomplete="username" autocapitalize="none" required>
+        <label for="p">Password</label>
+        <div class="relative">
+          <input id="p" type="password" class="inp w-full pr-16" autocomplete="current-password" required>
+          <button type="button" id="show" class="absolute right-3 top-1/2 -translate-y-1/2 text-[13px] text-pri">Show</button>
+        </div>
+        <p id="e" role="alert" class="min-h-[20px] my-3 text-[13px] text-bad"></p>
+        <button id="go" class="btn w-full py-2.5" type="submit">Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="assets/js/login.js"></script>
+</body></html>

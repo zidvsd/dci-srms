@@ -1,0 +1,89 @@
+:root {
+  --bg: #f3f5f9;
+  --card: #ffffff;
+  --ink: #101828;
+  --mut: #5b6678;
+  --line: #e1e6ee;
+  --pri: #0a58ca;
+  --pri2: #084298;
+  --onp: #ffffff;
+  --tint: #e8f0fc;
+  --bad: #b3261e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #0d1117;
+    --card: #161b24;
+    --ink: #e8ecf3;
+    --mut: #98a2b3;
+    --line: #28303c;
+    --pri: #6ea8fe;
+    --pri2: #8bb9fe;
+    --onp: #0b1f44;
+    --tint: #15233b;
+    --bad: #f07a72;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 14px/1.5 "IBM Plex Sans", system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pri);
+  outline-offset: 2px;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 14px 0 4px;
+}
+
+/* Reusable input */
+.inp {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.inp:focus {
+  border-color: var(--pri);
+}
+
+/* Reusable button */
+.btn {
+  background: var(--pri);
+  color: var(--onp);
+  border: 1px solid var(--pri);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background: var(--pri2);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
